@@ -366,7 +366,7 @@ static bool get_mininginfo(CURL *curl, struct work *work)
 		   if (work->height > g_work.height)
                    {
 			restart_threads();
-			if (!opt_quiet) {
+			if (true || !opt_quiet) {
 			   char netinfo[64] = { 0 };
 			   char srate[32] = { 0 };
 			   sprintf(netinfo, "diff %.2f", net_diff);
